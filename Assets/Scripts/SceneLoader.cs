@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    // cached reference
+    Level level;
+
+    private void Start()
+    {
+        level = FindObjectOfType<Level>();
+    }
 
     public void LoadNextScene()
     {

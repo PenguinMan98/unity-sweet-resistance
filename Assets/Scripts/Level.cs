@@ -5,7 +5,6 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     [SerializeField] int blockCount = 0;
-    [SerializeField] int destroyedBlocks = 0;
 
     // cached reference
     SceneLoader sceneLoader;
@@ -22,15 +21,15 @@ public class Level : MonoBehaviour
     {
     }
 
-    public void registerBlock()
+    public void registerBlock() // CountBreakableBlocks
     {
         blockCount += 1;
     }
 
-    public void destroyBlock()
+    public void destroyBlock() // BlockDestroyed
     {
-        destroyedBlocks += 1;
-        if (blockCount == destroyedBlocks)
+        blockCount -= 1;
+        if(blockCount <= 0)
         {
             // player wins
             sceneLoader.LoadNextScene();
