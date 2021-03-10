@@ -7,12 +7,12 @@ public class SceneLoader : MonoBehaviour
 {
     // cached reference
     Level level;
-    GameStatus gameStatus;
+    GameSession gameStatus;
 
     private void Start()
     {
         level = FindObjectOfType<Level>();
-        gameStatus = FindObjectOfType<GameStatus>();
+        gameStatus = FindObjectOfType<GameSession>();
     }
 
     public void LoadNextScene()

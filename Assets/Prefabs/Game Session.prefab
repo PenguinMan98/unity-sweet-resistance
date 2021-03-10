@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6121317328525355569}
   - component: {fileID: 6121317328525355574}
   m_Layer: 0
-  m_Name: Game Status
+  m_Name: Game Session
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,11 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6121317328525355575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e667d9265faff354b9215a5b02a2a1ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b4ba373482a9804a8b366fb82a05c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  gameSpeed: 0.8
+  gameSpeed: 1
   playerScore: {fileID: 8806601261463796918}
 --- !u!1001 &8806601262006349806
 PrefabInstance:

@@ -4,15 +4,16 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class GameStatus : MonoBehaviour
+public class GameSession : MonoBehaviour
 {
     [SerializeField] int score = 0;
     [Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f;
     [SerializeField] TextMeshProUGUI playerScore;
+    [SerializeField] bool isAutoPlayEnabled = false;
 
     private void Awake()
     {
-        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        int gameStatusCount = FindObjectsOfType<GameSession>().Length;
         if (gameStatusCount > 1)
         {
             gameObject.SetActive(false);
@@ -45,4 +46,9 @@ public class GameStatus : MonoBehaviour
         score += points;
         playerScore.text = "Player Score: " + score;
     }
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
+    }
+
 }

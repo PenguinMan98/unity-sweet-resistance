@@ -135,12 +135,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle1: {fileID: 0}
-  paddleLaunchVector: {x: 2, y: 12}
+  paddleLaunchVector: {x: 1, y: 8}
   bounceSounds:
   - {fileID: 8300000, guid: f969d2d67b446a8458c21a173bf040d9, type: 3}
   - {fileID: 8300000, guid: 97afdde46602ad04daed138d430953d1, type: 3}
   - {fileID: 8300000, guid: 28d66ce65ae28bd43b025431fbcb6411, type: 3}
   - {fileID: 8300000, guid: 39d6152f4635370408c1330f519bf011, type: 3}
+  randomFactor: 0.2
 --- !u!82 &1809754658
 AudioSource:
   m_ObjectHideFlags: 0
