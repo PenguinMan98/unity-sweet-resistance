@@ -13,7 +13,6 @@ public class Level : MonoBehaviour
     void Start()
     {
         sceneLoader = FindObjectOfType<SceneLoader>();
-        blockCount = 0;
     }
 
     // Update is called once per frame

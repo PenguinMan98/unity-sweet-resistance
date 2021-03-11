@@ -64,7 +64,7 @@ public class Block : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position, 1f);
         gameStatus.updateScore(pointsForBreaking);
-        Destroy(gameObject, .1f);
+        Destroy(gameObject);
         TriggerSparkles();
         level.destroyBlock();
     }
