@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 2523128208535144711}
   - component: {fileID: 2523128208535144710}
   m_Layer: 0
-  m_Name: Blue Rocket Background
+  m_Name: Background Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,8 +60,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2523128208535144709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.99964, y: 5.99986, z: 5}
+  m_LocalScale: {x: 2.6675467, y: 2.9998786, z: 1}
   m_Children: []
   m_Father: {fileID: 2523128207691983928}
   m_RootOrder: 0
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5ef302f62a4e9ae4bafcbd3a007a578a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 849fa9b3560aa2e469d16626dc16de20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -199,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2523128208899524669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.511, z: 0}
+  m_LocalPosition: {x: 0, y: -0.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2523128207691983928}
