@@ -54,20 +54,21 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        float modX = UnityEngine.Random.Range(myRigidBody2D.velocity.x - randomFactor, myRigidBody2D.velocity.x + randomFactor);
-        float modY = UnityEngine.Random.Range(myRigidBody2D.velocity.y - randomFactor, myRigidBody2D.velocity.y + randomFactor);
-        Vector2 velocityTweak = new Vector2(modX,modY);
-
-        float currentVelocity = myRigidBody2D.velocity.magnitude;
-        if(currentVelocity < launchVelocity)
-        {
-            //TODO: Speed the ball up
-        }
 
         if (ballLaunched)
         {
+            float modX = UnityEngine.Random.Range(myRigidBody2D.velocity.x - randomFactor, myRigidBody2D.velocity.x + randomFactor);
+            float modY = UnityEngine.Random.Range(myRigidBody2D.velocity.y - randomFactor, myRigidBody2D.velocity.y + randomFactor);
+            Vector2 velocityTweak = new Vector2(modX,modY);
+
             myAudioSource.PlayOneShot(bounceSounds[UnityEngine.Random.Range(0, bounceSounds.Length)]);
-            myRigidBody2D.velocity = velocityTweak;
+            myRigidBody2D.velocity = throttleBallVelocity(velocityTweak);
         }
+    }
+
+    private Vector2 throttleBallVelocity(Vector2 current)
+    {
+        float velocityDifferential = launchVelocity / current.magnitude;
+        return new Vector2(myRigidBody2D.velocity.x * velocityDifferential, myRigidBody2D.velocity.y * velocityDifferential);
     }
 }
